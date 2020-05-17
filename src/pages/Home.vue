@@ -1,7 +1,6 @@
 <template>
 	<div>
-		<div>Home</div>
-		<div style="display: flex; overflow: auto;">
+		<div class="statuses-container" @scroll="onScroll">
 			<StatusColumn
 				v-for="status in statuses"
 				ref="column"
@@ -15,11 +14,10 @@
 
 		<JCard
 			v-if="currentItem"
-			:id="current"
 			:current="current"
 			:item="currentItem"
-			style="position: absolute;"
-			:style="`left: ${left + startMovingPosition[1]}px; top: ${top + startMovingPosition[0]}px`"
+			class="j-card-copy"
+			:style="`left: ${left + startMovingPosition[1] - scroll[1]}px; top: ${top + startMovingPosition[0] - scroll[0]}px`"
 		/>
 	</div>
 </template>
@@ -29,7 +27,12 @@ import StatusColumn from 'Components/StatusColumn'
 import JCard from 'Components/JCard'
 import data from 'Components/json.json'
 
-const JCardHeight = 108
+const JCardHeight = 160
+
+const LS_KEYS = {
+	statuses: 'statuses',
+	items: 'items',
+}
 
 export default {
 	name: 'Home',
@@ -45,12 +48,27 @@ export default {
 			left: 0,
 			top: 0,
 			startMovingPosition: [0, 0],
+			scroll: [],
 			initialColumn: -1,
 		}
 	},
 	computed: {
 		currentItem() {
 			return this.items[this.current]
+		},
+	},
+	watch: {
+		statuses: {
+			deep: true,
+			handler(statuses) {
+				localStorage.setItem(LS_KEYS.statuses, JSON.stringify(statuses))
+			},
+		},
+		items: {
+			deep: true,
+			handler(items) {
+				localStorage.setItem(LS_KEYS.items, JSON.stringify(items))
+			},
 		},
 	},
 	created() {
@@ -66,8 +84,18 @@ export default {
 	},
 	methods: {
 		setData() {
-			this.statuses = data.statuses
-			this.items = data.items
+			try {
+				const statuses = JSON.parse(localStorage.getItem(LS_KEYS.statuses))
+				const items = JSON.parse(localStorage.getItem(LS_KEYS.items))
+
+				if (!statuses || !items) throw Error
+
+				this.statuses = statuses
+				this.items = items
+			} catch {
+				this.statuses = data.statuses
+				this.items = data.items
+			}
 		},
 		startMoving(item, e) {
 			this.top = e.clientY
@@ -131,6 +159,20 @@ export default {
 			this.current = -1
 			this.initialColumn = -1
 		},
+		onScroll(e) {
+			this.scroll = [0, e.target.scrollLeft]
+		},
 	},
 }
 </script>
+
+<style lang="scss">
+.statuses-container {
+	display: flex;
+	overflow: auto;
+}
+
+.j-card-copy {
+	position: absolute;
+}
+</style>

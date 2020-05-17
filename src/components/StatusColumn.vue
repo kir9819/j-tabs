@@ -1,14 +1,13 @@
 <template>
-	<div style="border: 1px solid; margin: 4px;">
-		<div>{{ status.title }}</div>
+	<div class="status-column">
+		<div class="status-column-title">{{ status.title }} <i>({{ status.items.length }})</i></div>
 
 		<JCard
 			v-for="item in status.items"
-			:id="item"
 			:key="item"
 			:item="items[item]"
 			:current="current"
-			:style="current === item ? 'opacity: 0.5;': 'opacity: 1;'"
+			:style="`opacity: ${current === item ? 0.5 : 1};`"
 			@start-moving="$emit('start-moving', item, $event)"
 		/>
 	</div>
@@ -38,3 +37,14 @@ export default {
 	},
 }
 </script>
+
+<style lang="scss">
+.status-column {
+	margin-left: 4px;
+	margin-right: 4px;
+
+	&-title {
+		font-weight: bold;
+	}
+}
+</style>
