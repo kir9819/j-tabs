@@ -6,7 +6,7 @@ Vue.use(Router)
 
 const router = new Router({
 	mode: 'history',
-	base: '/',
+	base: process.env.NODE_ENV === 'production' ? '/j-tabs/' : '/',
 	routes,
 })
 
