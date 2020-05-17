@@ -1,0 +1,246 @@
+{
+	"statuses": [
+		{
+			"title": "Согласование",
+			"items": []
+		},
+		{
+			"title": "В ожидании",
+			"items": [1, 2, 3, 4, 5, 6, 7, 8]
+		},
+		{
+			"title": "Разработка",
+			"items": [9, 10, 11, 12, 13]
+		},
+		{
+			"title": "Тестирование",
+			"items": [14]
+		},
+		{
+			"title": "Корректировки",
+			"items": []
+		},
+		{
+			"title": "Готова",
+			"items": [15, 16, 17, 18]
+		}
+	],
+	"items": {
+		"1": {
+			"id": 1,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"2": {
+			"id": 2,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"3": {
+			"id": 3,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"4": {
+			"id": 4,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"5": {
+			"id": 5,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"6": {
+			"id": 6,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"7": {
+			"id": 7,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"8": {
+			"id": 8,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"9": {
+			"id": 9,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"10": {
+			"id": 10,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"11": {
+			"id": 11,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"12": {
+			"id": 12,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"13": {
+			"id": 13,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"14": {
+			"id": 14,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"15": {
+			"id": 15,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"16": {
+			"id": 16,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"17": {
+			"id": 17,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		},
+		"18": {
+			"id": 18,
+			"priority": 0,
+			"status": "error",
+			"message": "",
+			"project": {
+				"label": "",
+				"link": ""
+			},
+			"responsible": [],
+			"deadline": ""
+		}
+	}
+}
