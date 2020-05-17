@@ -48,7 +48,7 @@ export default {
 			left: 0,
 			top: 0,
 			startMovingPosition: [0, 0],
-			scroll: [],
+			scroll: [0, 0],
 			initialColumn: -1,
 		}
 	},
